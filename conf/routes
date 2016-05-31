@@ -2,11 +2,15 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Navagation Pages
+# Home Page
 GET     /   									Home.index
-GET     /Login									Login.index
-GET 	/Logout									Logout.index
-GET		/Signup									Signup.index
+
+# Accounts
+GET     /Login									Accounts.Login
+GET 	/Logout									Accounts.Logout
+GET		/Signup									Accounts.Signup
+
+# Donation
 GET		/Donation								Donation.index
 
 # Ignore favicon requests
