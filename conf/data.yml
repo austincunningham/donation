@@ -23,7 +23,7 @@ User(lisa):
     usCitizen: true
     firstName: Lisa
     lastName: Simpson
-    email: Lisa@simpson.com
+    email: lisa@simpson.com
     password: secret
     
 User(maggie):

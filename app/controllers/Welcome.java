@@ -7,7 +7,7 @@ import java.util.*;
 
 import models.*;
 
-public class Home extends Controller
+public class Welcome extends Controller
 {
   public static void index()
   {

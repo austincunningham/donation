@@ -42,7 +42,7 @@ public class Accounts extends Controller {
         else
         {
         	Logger.info("Not a US Citizen ,usCitizen set to : "+usCitizen);
-        	Home.index();
+        	Welcome.index();
         }
 	  }
 	  public static void authenticate(String email, String password)

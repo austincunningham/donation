@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home Page
-GET     /   									Home.index
+GET     /   									Welcome.index
 
 # Accounts
 GET     /Login									Accounts.Login
