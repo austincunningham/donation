@@ -21,6 +21,7 @@ public class Accounts extends Controller {
 
 	  public static void Logout()
 	  {
+		session.clear();
 	    index();
 	  }
 
@@ -28,14 +29,21 @@ public class Accounts extends Controller {
 	  {
 	    render();
 	  }
-	  public static void register(String firstName, String lastName, String email, String password)
+	  public static void register(boolean usCitizen ,String firstName, String lastName, String email, String password)
 	  {
-	    Logger.info(firstName + " " + lastName + " " + email + " " + password);
+	    Logger.info(usCitizen +" "+firstName + " " + lastName + " " + email + " " + password);
+        if(usCitizen)
+        {
+	      User user = new User (usCitizen, firstName, lastName, email, password);
+	      user.save();
 
-	    User user = new User (firstName, lastName, email, password);
-	    user.save();
-
-	    index();
+	      index();
+        }
+        else
+        {
+        	Logger.info("Not a US Citizen ,usCitizen set to : "+usCitizen);
+        	Home.index();
+        }
 	  }
 	  public static void authenticate(String email, String password)
 	  {

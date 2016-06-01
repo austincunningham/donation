@@ -7,13 +7,15 @@ import play.db.jpa.Model;
 @Entity
 public class User extends Model
 {
+  public boolean usCitizen;
   public String firstName;
   public String lastName;
   public String email;
   public String password;
 
-  public User(String firstName, String lastName, String email, String password)
+  public User(boolean usCitizen,String firstName, String lastName, String email, String password)
   {
+	this.usCitizen = usCitizen;
     this.firstName = firstName;
     this.lastName  = lastName;
     this.email     = email;
