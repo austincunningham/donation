@@ -5,24 +5,24 @@
       <a class="ui item" href="/">Home</a>
       <a class="ui item" href="/Signup">Sign Up</a>
       <a class="ui item" href="/Login">Log In</a>
-      <a class="ui active item" href="/DonationCtrl">Make Donation</a>
+      <a class="ui active item" href="/Donation">Make Donation</a>
       <a class="ui item" href="/Logout">Logout</a>
 </nav>
-<h1>Welcome to Donation</h1>
+<h1>Welcome to Donation, ${user.firstName} ${user.lastName}</h1>
 
 <h3>Please give generously</h3>
 
-<form class="ui form" action="/donation/donate" method="POST">
+  <form class="ui form" action="/Donation/donate" method="POST">
     <div class="ui four column grid">
       <div class="column">
         <div class="ui selection dropdown">
-          <input name="amount" type="hidden">
+          <input name="amountDonated" type="hidden">
           <div class="default text">How Much do you wish to donate</div>
           <i class="dropdown icon"></i>
           <div class="menu">
-            <div class="item" money="100">$100</div>
-            <div class="item" money="500">$500</div>
-            <div class="item" money="1000">$1000</div>
+            <div class="item" data-value="100">$100</div>
+            <div class="item" data-value="500">$500</div>
+            <div class="item" data-value="1000">$1000</div>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
         <div class="grouped inline fields">
           <div class="field">
             <div class="ui radio checkbox">
-              <input id="paypal" name="methodDonation" value="paypal" type="radio"> 
+              <input id="paypal" name="methodDonated" value="paypal" type="radio" checked="checked"> 
               <label for="paypal">PayPal <i class="paypal icon"></i></label>
             </div>
           </div>
@@ -43,6 +43,15 @@
         </div>
       </div>
     </div>
-    <div class="ui blue submit button">Donate <i class="add icon"></i></div>
+    <div class="ui blue submit button">Donate <i class="dollar icon"></i></div>
     <div class="ui error message"></div>
   </form>
+  <div class = "ui segment">
+  	<h4 class= "ui header">Amount target achieved</h4>
+  	  <div class="ui successfull progress">
+  	    ${progress}
+  	    <div class="bar" style="width:${progress}"></div>
+  	  </div>
+  </div>
+
+</section>

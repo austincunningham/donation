@@ -53,7 +53,7 @@ public class Accounts extends Controller {
 		    {
 		      Logger.info("Authentication successful");
 		      session.put("logged_in_userid", user.id);
-		      Home.index();
+		      DonationCtrl.index();
 		    }
 		    else
 		    {

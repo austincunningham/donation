@@ -13,7 +13,9 @@ POST    /authenticate                           Accounts.authenticate
 POST    /register                               Accounts.register
 
 # Donation
-GET		/DonationCtrl							DonationCtrl.index
+GET		/Donation								DonationCtrl.index
+POST    /Donation/donate						DonationCtrl.donate
+GET 	/Donation/report						DonationCtrl.renderReport
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

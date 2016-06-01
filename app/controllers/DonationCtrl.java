@@ -19,11 +19,10 @@ public class DonationCtrl extends Controller
     }
     else 
     {
-//      String prog = getPrecentTargetArchieved();
-//      String progress =prog + "%";
-//      Logger.info("Donation controller : % target achieved "+progress);
-//      render(user,progress);
-        render(user, 100);
+      String prog = getPrecentTargetArchieved();
+      String progress = prog + "%";
+      Logger.info("Donation controller : % target achieved "+progress);
+      render(user, progress);
     }
   }
   public static void donate(long amountDonated, String methodDonated)
@@ -52,19 +51,19 @@ public class DonationCtrl extends Controller
     return 20000;
   }
   
-//  public static String getPrecentTargetArchieved()
-//  {
-//    List<Donation> allDonations = Donation.findAll();
-//    long total = 0;
-//    for(Donation donation : allDonations)
-//    {
-//      total +=donation.recieved;
-//    }
-//    long target = getDonationTarget();
-//    long percentachieved = (total * 100/target);
-//    String progress = String.valueOf(percentachieved);
-//    return progress;
-//  }
+  public static String getPrecentTargetArchieved()
+  {
+    List<Donation> allDonations = Donation.findAll();
+    long total = 0;
+    for(Donation donation : allDonations)
+    {
+      total += donation.amountDonated;
+    }
+    long target = getDonationTarget();
+    long percentachieved = (total * 100/target);
+    String progress = String.valueOf(percentachieved);
+    return progress;
+  }
    
   public static void renderReport()
   {
