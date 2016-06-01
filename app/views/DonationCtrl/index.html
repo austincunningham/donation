@@ -11,8 +11,8 @@
 <h1>Welcome to Donation, ${user.firstName} ${user.lastName}</h1>
 
 <h3>Please give generously</h3>
-
-  <form class="ui form" action="/Donation/donate" method="POST">
+<section class="ui form segment">
+  <form action="/donate" method="POST">
     <div class="ui four column grid">
       <div class="column">
         <div class="ui selection dropdown">
@@ -43,15 +43,15 @@
         </div>
       </div>
     </div>
-    <div class="ui blue submit button">Donate <i class="dollar icon"></i></div>
+    <button class="ui blue submit button">Donate <i class="dollar icon"></i></button>
     <div class="ui error message"></div>
   </form>
-  <div class = "ui segment">
-  	<h4 class= "ui header">Amount target achieved</h4>
-  	  <div class="ui successfull progress">
-  	    ${progress}
-  	    <div class="bar" style="width:${progress}"></div>
-  	  </div>
-  </div>
-
 </section>
+<div class = "ui segment">
+  <h4 class= "ui header">Amount target achieved</h4>
+	<div class="ui successfull progress">
+	    ${progress}
+	<div class="bar" style="width:${progress}"></div>
+  </div>
+</div>
+
