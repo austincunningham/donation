@@ -61,5 +61,16 @@ public class Accounts extends Controller {
 		      Login();  
 		    }
 	  }
+	  public static User getCurrentUser()
+	  {
+		  String userId = session.get("logged_in_userid");
+		  if (userId == null)
+		  {
+			  return null;
+		  }
+		  User logged_in_user = User.findById(Long.parseLong(userId));
+		  Logger.info("Logged in User: "+logged_in_user.firstName);
+		  return logged_in_user;
+	  }
 	  
 }
