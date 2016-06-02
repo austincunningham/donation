@@ -5,7 +5,8 @@
       <a class="ui item" href="/">Welcome</a>
       <a class="ui item" href="/Signup">Sign Up</a>
       <a class="ui item" href="/Login">Log In</a>
-      <a class="ui active item" href="/Donation">Make Donation</a>
+      <a class="ui item" href="/Donation">Make Donation</a>
+      <a class="ui active item" href="/Donation/reports">Reports</a>
       <a class="ui item" href="/Logout">Logout</a>
 </nav>
 <h1>Welcome to Donation Reports</h1>
@@ -25,6 +26,7 @@
       <td>${donation.from.firstName}&nbsp${donation.from.lastName}</td>
       <td>${donation.amountDonated}</td>
       <td>${donation.methodDonated}</td>
+      <td>${donation.createdOn}</td>
     </tr>
   #{/list}
 </tbody>
