@@ -66,7 +66,7 @@ public class DonationCtrl extends Controller
     return progress;
   }
    
-  public static void renderReport()
+  public static void Reports()
   {
     List<Donation> donations = Donation.findAll();
     render(donations);
