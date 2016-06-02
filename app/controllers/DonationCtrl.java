@@ -3,6 +3,7 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import models.*;
@@ -71,5 +72,4 @@ public class DonationCtrl extends Controller
     List<Donation> donations = Donation.findAll();
     render(donations);
   }
-  
 }

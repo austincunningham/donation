@@ -20,7 +20,7 @@ public class Donation extends Model
   
   @ManyToOne
   public User from;
-  public Date createdOn;
+  public static Date createdOn;
 
   public Donation(User from, long amountDonated, String methodDonated)
   {

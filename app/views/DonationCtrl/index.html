@@ -12,51 +12,57 @@
 <h1>Welcome to Donation, ${user.firstName} ${user.lastName}</h1>
 
 <h3>Please give generously</h3>
-<section class="ui form segment">
-  <form action="/Donation/donate" method="POST">
-    <div class="ui four column grid">
-      <div class="column">
-        <div class="ui selection dropdown">
-          <input name="amountDonated" type="hidden">
-          <div class="default text">How Much do you wish to donate</div>
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <div class="item" data-value="100">$100</div>
-            <div class="item" data-value="500">$500</div>
-            <div class="item" data-value="1000">$1000</div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="grouped inline fields">
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input id="paypal" name="methodDonated" value="paypal" type="radio" checked="checked"> 
-              <label for="paypal">PayPal <i class="paypal icon"></i></label>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input id="direct" name="methodDonated" value="direct" type="radio"> 
-              <label for="direct">Direct <i class="visa icon"></i></label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="ui blue submit button">Donate <i class="dollar icon"></i></button>
-    <div class="ui error message"></div>
-  </form>
-</section>
 <div class="ui grid">
-  <div class="eight wide column">
+  <div class="ten wide column">
+	<section class="ui form segment">
+	  <form action="/Donation/donate" method="POST">
+	    <div class="ui four column grid">
+	      <div class="column">
+	        <div class="ui selection dropdown">
+	          <input name="amountDonated" type="hidden">
+	          <div class="default text">How Much do you wish to donate</div>
+	          <i class="dropdown icon"></i>
+	          <div class="menu">
+	            <div class="item" data-value="100">$100</div>
+	            <div class="item" data-value="500">$500</div>
+	            <div class="item" data-value="1000">$1000</div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="column">
+	        <div class="grouped inline fields">
+	          <div class="field">
+	            <div class="ui radio checkbox">
+	              <input id="paypal" name="methodDonated" value="paypal" type="radio" checked="checked"> 
+	              <label for="paypal">PayPal <i class="paypal icon"></i></label>
+	            </div>
+	          </div>
+	          <div class="field">
+	            <div class="ui radio checkbox">
+	              <input id="direct" name="methodDonated" value="direct" type="radio"> 
+	              <label for="direct">Direct <i class="visa icon"></i></label>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <button class="ui blue submit button">Donate <i class="dollar icon"></i></button>
+	    <div class="ui error message"></div>
+	  </form>
+	</section>
+  </div>
+</div>
+<div class="ui grid">
+  <div class="ten wide column">
 	<div class = "ui segment">
-	  <h4 class= "ui header">Amount target achieved</h4>
-		<div class="ui green active progress">
+	  <h4 class= "ui header"> Amount target achieved ${progress}</h4>
+		<div class="ui teal indicating active progress" id="progress">
 		    
-		<div class="bar" style="width:${progress}" ><b>${progress}</b></div>
-		<div class="progress"></div>
+		<div class="bar" style="width:${progress}">
+		  <div class="progress"></div>
+		</div>
 	  </div>
 	</div>
   </div>
 </div>
+

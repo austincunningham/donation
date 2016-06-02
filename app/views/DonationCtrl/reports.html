@@ -10,24 +10,27 @@
       <a class="ui item" href="/Logout">Logout</a>
 </nav>
 <h1>Welcome to Donation Reports</h1>
-
-<table class="ui table segment">
-<thead>
-  <tr>
-    <th>Donors</th>
-    <th>Ammount($)</th>
-    <th>Method of Donation</th>
-    <th>Date Donated</th>
-  </tr>
-</thead>
-<tbody>
-  #{list items:donations, as:'donation'}
-    <tr>
-      <td>${donation.from.firstName}&nbsp${donation.from.lastName}</td>
-      <td>${donation.amountDonated}</td>
-      <td>${donation.methodDonated}</td>
-      <td>${donation.createdOn}</td>
-    </tr>
-  #{/list}
-</tbody>
-</table>
+<div class="ui grid">
+  <div class="eight wide column">
+	<table class="ui table segment">
+	<thead>
+	  <tr>
+	    <th>Donors</th>
+	    <th>Ammount($)</th>
+	    <th>Method of Donation</th>
+	    <th>Date Donated</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  #{list items:donations, as:'donation'}
+	    <tr>
+	      <td>${donation.from.firstName}&nbsp${donation.from.lastName}</td>
+	      <td>${donation.amountDonated}</td>
+	      <td>${donation.methodDonated}</td>
+	      <td>${donation.createdOn}</td>
+	    </tr>
+	  #{/list}
+	</tbody>
+	</table>
+  </div>
+</div>
