@@ -17,11 +17,11 @@ public class Donation extends Model
   
   public long amountDonated;
   public String methodDonated;
-  
+  public Date createdOn;
+
   @ManyToOne
   public User from;
-  public static Date createdOn;
-
+  
   public Donation(User from, long amountDonated, String methodDonated)
   {
     this.from = from;
