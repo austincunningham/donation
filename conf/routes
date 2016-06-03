@@ -1,4 +1,4 @@
-# Routes
+# Routesr
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
@@ -15,7 +15,7 @@ POST    /register                               Accounts.register
 # Donation
 GET		/Donation								DonationCtrl.index
 POST    /Donation/donate		          		DonationCtrl.donate
-GET 	/Donation/reports						DonationCtrl.reports
+GET 	/Donation/Reports						DonationCtrl.Reports
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
