@@ -11,14 +11,8 @@
 * Summary of set up
 * Configuration: clone repo, play run , access localhost:9000 on browser
 * Dependencies: Need Play framework 1.4 or greater
-* Database configuration:locally H2:mem preloaded with bootstrap, Live version on heroku preconfigured with MySQL
+* Database configuration:locally H2:mem preloaded with bootstrap, Live version on heroku configured with MySQL
 
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
 
