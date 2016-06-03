@@ -29,13 +29,7 @@ public class Donation extends Model
     this.from = from;
     this.amountDonated = amountDonated;
     this.methodDonated = methodDonated;
-    Date createOn= new Date();
     formatDate = dateFormatter();
-//	createdOn = new Timestamp(createOn.getTime());
-//		
-//	DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-//	formatDate = df.format(createdOn);
-//	Logger.info("createdOn "+createdOn+" formatDate "+formatDate);
   }
   public String dateFormatter()
   {
