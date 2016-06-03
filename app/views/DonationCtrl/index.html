@@ -2,12 +2,12 @@
 #{set title:'Donation' /}
 
 <nav class="ui inverted blue menu">
-      <a class="ui item" href="/">Welcome</a>
-      <a class="ui item" href="/Signup">Sign Up</a>
-      <a class="ui item" href="/Login">Log In</a>
-      <a class="ui active item" href="/Donation">Make Donation</a>
-      <a class="ui item" href="/Donation/reports">Reports</a>
-      <a class="ui item" href="/Logout">Logout</a>
+      <a class="ui item" href="/"><i class="home icon"></i>Welcome</a>
+      <a class="ui item" href="/Signup"><i class="add user icon"></i>Sign Up</a>
+      <a class="ui item" href="/Login"><i class="sign in icon"></i>Log In</a>
+      <a class="ui active item" href="/Donation"><i class="dollar icon"></i>Make Donation</a>
+      <a class="ui item" href="/Donation/reports"><i class="money icon"></i>Reports</a>
+      <a class="ui item" href="/Logout"><i class="sign out icon"></i>Logout</a>
 </nav>
 <h1>Welcome to Donation, ${user.firstName} ${user.lastName}</h1>
 
@@ -20,7 +20,7 @@
 	      <div class="column">
 	        <div class="ui selection dropdown">
 	          <input name="amountDonated" type="hidden">
-	          <div class="default text">How Much do you wish to donate</div>
+	          <div class="default text">Amount to donate</div>
 	          <i class="dropdown icon"></i>
 	          <div class="menu">
 	            <div class="item" data-value="100">$100</div>
@@ -65,4 +65,5 @@
 	</div>
   </div>
 </div>
+<script src="@{'/public/javascripts/donate.js'}"></script>
 
