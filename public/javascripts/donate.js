@@ -1,10 +1,6 @@
 /** force semantic ui forms to work*/ 
 $('.ui.dropdown').dropdown();
-       
 
-$('.ui.dropdown')
-  .dropdown()
-;
 
 $('.ui.form')
 .form({
@@ -13,7 +9,7 @@ $('.ui.form')
     rules: [
       {
         type: 'empty',
-    prompt: 'You forgot to give us money , Please select amount to donate'
+        prompt: 'You forgot to give us money , Please select amount to donate'
       }
     ]
   }

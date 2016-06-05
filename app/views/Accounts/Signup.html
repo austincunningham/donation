@@ -33,7 +33,7 @@
 	    </div>
 	    <div class="inline field">
 	      <div class="ui checkbox">
-	        <input id="conditions" type="checkbox">
+	        <input id="conditions" type="checkbox" name="conditions">
 	        <label for= "conditions">I agree to the terms and conditions</label> 
 	      </div>
 	    </div>
@@ -43,8 +43,10 @@
 	        <label for="usCitizen">Tick to confirm you are a citizen of the USA </label>
 	      </div>
 	    </div>
-	    <button class="ui blue submit button">Submit</button>
+	    <button type="submit" class="ui blue submit button">Submit</button>
+	    <div class="ui error message"></div>
 	  </form>
 	</section>
   </div>
 </div>
+<script src="@{'/public/javascripts/signup.js'}"></script>
