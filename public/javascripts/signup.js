@@ -57,7 +57,7 @@ $('.ui.form')
         rules: [
           {
             type   : 'checked',
-            prompt : 'You must agree to the terms and conditions, i.e. Homer is a fictional character and as such can't stand for President'
+            prompt : 'You must agree to the terms and conditions, i.e. Homer is a fictional character and as such can\'t stand for President'
           }
         ]
       }
