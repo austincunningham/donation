@@ -1,6 +1,6 @@
 /** force semantic ui forms to work*/ 
 $('.ui.dropdown').dropdown();
-
+$('#progress').progress();
 
 $('.ui.form')
 .form({
