@@ -5,6 +5,8 @@
 * Quick summary: Play 1.4 app written in java , allows user to sign up and make Donations
 * Version: Iteration_v4
 * [Live Heroku version](http://donation-austin.herokuapp.com/)
+* Login: homer@simpson.com
+* Password: secret
 ![donation.JPG](https://bitbucket.org/repo/7ag6EX/images/656710609-donation.JPG)
 
 ### How do I get set up? ###
