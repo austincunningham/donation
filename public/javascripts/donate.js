@@ -38,12 +38,10 @@ $('.ui.form')
 //		}
 //	  });
 //	}
-
-/** Ajax without form validation
- * 
- */
 //$('.ui.dropdown').dropdown();
-$('.ui.submit.button').click(function () {
+
+//$('.ui.submit.button').click(function () {
+function submitForm() {
   const formData = $('.ui.form.segment input').serialize();
   $.ajax({
     type: 'POST',
@@ -57,4 +55,4 @@ $('.ui.submit.button').click(function () {
 	$('#progresslabel').text(response.progress + " % of target achieved to date for candidate Homer Simpson");
     }
   });
-})
+}
