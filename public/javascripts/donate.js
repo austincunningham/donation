@@ -1,28 +1,27 @@
 /** force semantic ui forms to work*/ 
-//$('.ui.dropdown').dropdown();
+$('.ui.dropdown').dropdown();
 //$('#progress').progress();
-//
-//$('.ui.form')
-//.form({
-//  amountDonated: {
-//    identifier: 'amountDonated',
-//    rules: [
-//      {
-//        type: 'empty',
-//        prompt: 'You forgot to give us money , Please select amount to donate'
-//      }
-//    ]
-//  }
 
-//},
-//{
-//	onSuccess : function() {
-//		inline: true,
-//	    console.log('on success');
-//	    submitForm();
-//	    return false; // dropdown remains open following press donate button. progress bar fails on return true. why?
-//	} 
-//});
+$('.ui.form')
+.form({
+  amountDonated: {
+    identifier: 'amountDonated',
+    rules: [
+      {
+        type: 'empty',
+        prompt: 'You forgot to give us money , Please select amount to donate'
+      }
+    ]
+  }
+},
+{
+	onSuccess : function() {
+		inline: true,
+	    console.log('on success');
+	    submitForm();
+	    return false; // dropdown remains open following press donate button. progress bar fails on return true. why?
+	} 
+});
 
 //function submitForm() {
 //	  const formData = $('.ui.form.segment input').serialize(); 
@@ -43,7 +42,7 @@
 /** Ajax without form validation
  * 
  */
-$('.ui.dropdown').dropdown();
+//$('.ui.dropdown').dropdown();
 $('.ui.submit.button').click(function () {
   const formData = $('.ui.form.segment input').serialize();
   $.ajax({
