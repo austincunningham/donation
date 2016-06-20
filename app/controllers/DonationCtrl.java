@@ -7,6 +7,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import org.json.simple.JSONObject;
+
 import models.*;
 
 
@@ -40,6 +42,9 @@ public class DonationCtrl extends Controller
     else
     {
       addDonation(user, amountDonated, methodDonated);
+      JSONObject obj = new JSONObject();
+      obj.put("progress", getPrecentTargetArchieved());
+      renderJSON(obj);
     }
     index();
   }

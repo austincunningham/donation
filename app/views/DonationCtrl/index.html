@@ -15,7 +15,7 @@
 <div class="ui grid">
   <div class="ten wide column">
 	<section class="ui form segment">
-	  <form action="/Donation/donate" method="POST">
+<!-- 	  <form action="/Donation/donate" method="POST"> -->
 	    <div class="ui four column grid">
 	      <div class="column">
 	        <div class="ui selection dropdown">
@@ -54,13 +54,21 @@
 </div>
 <div class="ui grid">
   <div class="ten wide column">
-	<div class = "ui segment">
-	  <h4 class= "ui header"> Amount target achieved ${progress}</h4>
-		<div class="ui teal active progress" id="progress" data-percent=${progress}>
+<!-- 	<div class = "ui segment"> -->
+<!-- 	  <h4 class= "ui header"> Amount target achieved ${progress}</h4> -->
+<!-- 		<div class="ui teal active progress" id="progress" data-percent=${progress}> -->
 		    
-		<div class="bar" style="width:${progress}">
-		  <div class="progress"></div>
-		</div>
+<!-- 		<div class="bar" style="width:${progress}"> -->
+<!-- 		  <div class="progress"></div> -->
+<!-- 		</div> -->
+	  <div class="ui segment">   
+	    <div class="ui indicating progress" id="progress">
+	      <div class="bar">
+	        <div class="progress"></div>
+	      </div>
+	      <div class="label" id="progresslabel"></div>
+	    </div>
+	    
 	  </div>
 	</div>
   </div>
