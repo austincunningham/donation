@@ -47,12 +47,21 @@ function submitForm() {
     type: 'POST',
     url: '/Donation/donate',
     data: formData,
+    limitValues: false,
     success: function (response) {
+    	if (response.progress > 100){
+    		    $('.ui.indicating.progress').progress({
+    		    	percent: 100
+    		    });
+    			$('#progresslabel').text(response.progress + " % you have exceeded the target for  Homer Simpson");
+       	}
+    	else{
       console.log('make donation page submitForm response: ' + response.progress);
       $('.ui.indicating.progress').progress({
 		  percent: response.progress
 		});
 	$('#progresslabel').text(response.progress + " % of target achieved to date for candidate Homer Simpson");
+    	}
     }
   });
 }
