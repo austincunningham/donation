@@ -1,5 +1,8 @@
 /** force semantic ui forms to work*/ 
 $('.ui.dropdown').dropdown();
+/**
+ * semantic ui form validation version 1
+ */
 //$('#progress').progress();
 
 //$('.ui.form')
@@ -65,6 +68,10 @@ $('.ui.form').form({
 //$('.ui.dropdown').dropdown();
 
 //$('.ui.submit.button').click(function () {
+
+/**
+ * progress bar doesn't exceed 100%
+ */
 function submitForm() {
   const formData = $('.ui.form.segment input').serialize();
   $.ajax({
