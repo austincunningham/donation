@@ -2,19 +2,42 @@
 $('.ui.dropdown').dropdown();
 //$('#progress').progress();
 
-$('.ui.form')
-.form({
-  amountDonated: {
-    identifier: 'amountDonated',
-    rules: [
-      {
-        type: 'empty',
-        prompt: 'You forgot to give us money , Please select amount to donate'
-      }
-    ]
-  }
+//$('.ui.form')
+//.form({
+//  amountDonated: {
+//    identifier: 'amountDonated',
+//    rules: [
+//      {
+//        type: 'empty',
+//        prompt: 'You forgot to give us money , Please select amount to donate'
+//      }
+//    ]
+//  }
+//},
+//{
+//	onSuccess : function() {
+//		inline: true,
+//	    console.log('on success');
+//	    submitForm();
+//	    return false; // dropdown remains open following press donate button. progress bar fails on return true. why?
+//	} 
+//});
+
+/**
+ * Semantic ui form validation version 2
+ */
+
+$('.ui.form').form({
+	fields: {	
+	amountDonated: {
+	  identifier: 'amountDonated',
+	  rules: [{
+	      type: 'empty',
+	      prompt: 'You forgot to give us money , Please select amount to donate'
+	    },],
+	},
 },
-{
+
 	onSuccess : function() {
 		inline: true,
 	    console.log('on success');
@@ -22,6 +45,7 @@ $('.ui.form')
 	    return false; // dropdown remains open following press donate button. progress bar fails on return true. why?
 	} 
 });
+
 
 //function submitForm() {
 //	  const formData = $('.ui.form.segment input').serialize(); 
@@ -50,17 +74,16 @@ function submitForm() {
     limitValues: false,
     success: function (response) {
     	if (response.progress > 100){
-    		    $('.ui.indicating.progress').progress({
-    		    	percent: 100
-    		    });
-    			$('#progresslabel').text(response.progress + " % you have exceeded the target for  Homer Simpson");
-       	}
-    	else{
-      console.log('make donation page submitForm response: ' + response.progress);
-      $('.ui.indicating.progress').progress({
-		  percent: response.progress
-		});
-	$('#progresslabel').text(response.progress + " % of target achieved to date for candidate Homer Simpson");
+		  $('.ui.indicating.progress').progress({
+		    	percent: 100
+	      });
+		  $('#progresslabel').text(response.progress + " % you have exceeded the target for  Homer Simpson");
+       	}else{
+	      console.log('make donation page submitForm response: ' + response.progress);
+	      $('.ui.indicating.progress').progress({
+			  percent: response.progress
+			});
+		  $('#progresslabel').text(response.progress + " % of target achieved to date for candidate Homer Simpson");
     	}
     }
   });
